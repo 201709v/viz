@@ -1,0 +1,195 @@
+[2025-03-07 20:14:17] ✅ SCADA Server is running and waiting for data...
+[2025-03-07 20:14:53] 🔗 Connection established with: ('127.0.0.1', 54077)
+[2025-03-07 20:14:53] 🚨 Data integrity compromised! Marking as tampered.
+[2025-03-07 20:14:53] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.100.4",
+  "PressureValue": "128 bar",
+  "Temperature": "117\u00b0C",
+  "FlowRate": "2422 psi",
+  "SwitchRate": "ON",
+  "ValveStatus": "close",
+  "PumpStatus": "inactive",
+  "FlowIndicator": "high",
+  "status": "tampered",
+  "hash": "2ce1bd81dc50765199884bae69d939a36c1b237365201c2dd5cddac3d6556c56"
+}
+[2025-03-07 20:14:53] ✅ Data stored successfully in SCADA server.
+[2025-03-10 14:39:51] ✅ SCADA Server is running and waiting for data...
+[2025-03-10 14:42:15] 🔗 Connection established with: ('127.0.0.1', 57322)
+[2025-03-10 14:42:15] 🚨 Data integrity compromised! Marking as tampered.
+[2025-03-10 14:42:15] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.100.4",
+  "PressureValue": "107 bar",
+  "Temperature": "140\u00b0C",
+  "FlowRate": "2192 psi",
+  "SwitchRate": "ON",
+  "ValveStatus": "high",
+  "PumpStatus": "active",
+  "FlowIndicator": "high",
+  "status": "tampered",
+  "hash": "42755b6864aadda4f8a8212d4bcba449aef638f35324e2cb532ca194f63c7907"
+}
+[2025-03-10 14:42:15] ✅ Data stored successfully in SCADA server.
+[2025-03-10 14:46:58] ✅ SCADA Server is running and waiting for data...
+[2025-03-10 14:49:55] 🔗 Connection established with: ('127.0.0.1', 58504)
+[2025-03-10 14:49:55] ✔ Verified: Data integrity confirmed.
+[2025-03-10 14:49:55] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.100.4",
+  "PressureValue": "300",
+  "Temperature": "400",
+  "FlowRate": "500",
+  "SwitchRate": "600",
+  "ValveStatus": "open",
+  "PumpStatus": "close",
+  "FlowIndicator": null,
+  "status": "intact",
+  "hash": "d95b620b5379150502a7a05e266424f5da9aa8bb234363873b9b73972b153d1d"
+}
+[2025-03-10 14:49:55] ✅ Data stored successfully in SCADA server.
+[2025-03-11 12:04:49] ✅ SCADA Server is running and waiting for data...
+[2025-03-11 12:05:22] 🔗 Connection established with: ('127.0.0.1', 61970)
+[2025-03-11 12:05:22] 🚨 Data integrity compromised! Marking as tampered.
+[2025-03-11 12:05:22] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.99.11",
+  "PressureValue": "105 bar",
+  "Temperature": "169\u00b0C",
+  "FlowRate": "2181 psi",
+  "SwitchRate": "ON",
+  "ValveStatus": "close",
+  "PumpStatus": "active",
+  "FlowIndicator": "low",
+  "status": "tampered",
+  "hash": "58165c50fe68e3f756d63500456d890bda1154c45e42532978c50afc744b352f"
+}
+[2025-03-11 12:05:22] ✅ Data stored successfully in SCADA server.
+[2025-03-11 12:07:13] 🔗 Connection established with: ('127.0.0.1', 49783)
+[2025-03-11 12:07:13] ✔ Verified: Data integrity confirmed.
+[2025-03-11 12:07:13] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.51.11",
+  "PressureValue": "60",
+  "Temperature": "70",
+  "FlowRate": "80",
+  "SwitchRate": "90",
+  "ValveStatus": "100",
+  "PumpStatus": "110",
+  "FlowIndicator": null,
+  "status": "intact",
+  "hash": "27f9239c3b582095417b84ff016c30f6ac8dfe0de59f48dd6a747390d49b5900"
+}
+[2025-03-11 12:07:13] ✅ Data stored successfully in SCADA server.
+[2025-03-11 12:11:39] 🔗 Connection established with: ('127.0.0.1', 52993)
+[2025-03-11 12:11:39] ✔ Verified: Data integrity confirmed.
+[2025-03-11 12:11:39] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.51.11",
+  "PressureValue": "500",
+  "Temperature": "300degrees",
+  "FlowRate": "high",
+  "SwitchRate": "open",
+  "ValveStatus": "good",
+  "PumpStatus": "high ",
+  "FlowIndicator": null,
+  "status": "intact",
+  "hash": "f958cef1b2590220957c466db6814fb80f490230998260daddc49ac5581ba85a"
+}
+[2025-03-11 12:11:39] ✅ Data stored successfully in SCADA server.
+[2025-03-11 12:12:54] ✅ SCADA Server is running and waiting for data...
+[2025-03-11 12:13:24] 🔗 Connection established with: ('127.0.0.1', 54221)
+[2025-03-11 12:13:24] ✔ Verified: Data integrity confirmed.
+[2025-03-11 12:13:24] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.99.11",
+  "PressureValue": "300psi",
+  "Temperature": "400degres",
+  "FlowRate": "high",
+  "SwitchRate": "open",
+  "ValveStatus": "good",
+  "PumpStatus": "good",
+  "FlowIndicator": null,
+  "status": "idle",
+  "hash": "ddc78fef0d8d074f92bfbc3f4b6821253555d23e55837d04c915349e93b34de6"
+}
+[2025-03-11 12:13:24] ✅ Data stored successfully in SCADA server.
+[2025-03-11 12:31:22] ✅ SCADA Server is running and waiting for data...
+[2025-03-11 20:12:50] ✅ SCADA Server is running and waiting for data...
+[2025-03-11 20:12:56] 🔗 Connection established with: ('127.0.0.1', 60895)
+[2025-03-11 20:12:56] ✔ Verified: Data integrity confirmed.
+[2025-03-11 20:12:56] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.100.4",
+  "PressureValue": "300psi",
+  "Temperature": "400degres",
+  "FlowRate": "high",
+  "SwitchRate": "oepn",
+  "ValveStatus": "good",
+  "PumpStatus": "60hz",
+  "FlowIndicator": null,
+  "status": "idle",
+  "hash": "7216984207c61846c165724ab332d764a9faace825c97f5a6ae69ad91a5e3696"
+}
+[2025-03-11 20:12:56] ✅ Data stored successfully in SCADA server.
+[2025-03-11 20:15:10] 🔗 Connection established with: ('127.0.0.1', 62425)
+[2025-03-11 20:15:10] 🚨 Data integrity compromised! Marking as tampered.
+[2025-03-11 20:15:10] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.100.4",
+  "PressureValue": "45 bar",
+  "Temperature": "148\u00b0C",
+  "FlowRate": "2978 psi",
+  "SwitchRate": "ON",
+  "ValveStatus": "close",
+  "PumpStatus": "inactive",
+  "FlowIndicator": "low",
+  "status": "tampered",
+  "hash": "883a605d84d5275fca7fb2ccbf2dd847b4728b552ee4654499828215812233c6"
+}
+[2025-03-11 20:15:10] ✅ Data stored successfully in SCADA server.
+[2025-03-13 10:50:10] ✅ SCADA Server is running and waiting for data...
+[2025-03-13 10:51:53] 🔗 Connection established with: ('127.0.0.1', 50828)
+[2025-03-13 10:51:53] ✔ Verified: Data integrity confirmed.
+[2025-03-13 10:51:53] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.163.11",
+  "PressureValue": "300psi",
+  "Temperature": "200degree",
+  "FlowRate": "60hz",
+  "SwitchRate": "open",
+  "ValveStatus": "good",
+  "PumpStatus": "high",
+  "FlowIndicator": null,
+  "status": "idle",
+  "hash": "f70dddb7f73bea560ae4e14ae9e520e724bbd61ae3f387723be1b65d4b1090f3"
+}
+[2025-03-13 10:51:53] ✅ Data stored successfully in SCADA server.
+[2025-03-13 10:53:03] 🔗 Connection established with: ('127.0.0.1', 50833)
+[2025-03-13 10:53:03] ✔ Verified: Data integrity confirmed.
+[2025-03-13 10:53:03] 📊 Received SCADA Data:
+{
+  "HostName": "vijayendra",
+  "IP": "192.168.163.11",
+  "PressureValue": "330",
+  "Temperature": "400",
+  "FlowRate": "500",
+  "SwitchRate": "300",
+  "ValveStatus": "399",
+  "PumpStatus": "200",
+  "FlowIndicator": null,
+  "status": "idle",
+  "hash": "da6913fece5ac6add08c5a743e350a1965940d3b3502b3c84f369b214f80fe22"
+}
+[2025-03-13 10:53:03] ✅ Data stored successfully in SCADA server.

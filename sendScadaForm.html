@@ -1,0 +1,67 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<section class="about">
+    <div class="container">
+        <h2>Send SCADA Commands to Machine </h2>
+        <p align="justify">
+        <form action="{%url 'sendScadaMessage'%}" method="post">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="name">Host Name</label>
+                <input type="text" class="form-control" name="hostName" value="{{hostName}}"
+                       readonly>
+            </div>
+            <div class="form-group">
+                <label for="name">Your IP Address</label>
+                <input type="text" class="form-control" name="ip" value="{{ip}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="name">Enter Pressure Value</label>
+                <input type="text" class="form-control" id="pressureValue" name="pressureValue"
+                       placeholder="Enter Pressure Value" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Enter Temperature Value</label>
+                <input type="test" class="form-control" id="temperature" name="temperature"
+                       placeholder="Your Temperature Value" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Enter Flow Rate Value</label>
+                <input type="test" class="form-control" id="flowRate" name="flowRate" placeholder="Enter Flow Rate"
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="name">Switch States</label>
+                <input type="text" class="form-control" id="switchRate" name="switchRate"
+                       placeholder="Switch States open/close" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Valve Status</label>
+                <input type="text" class="form-control" id="valveStatus" name="valveStatus"
+                       placeholder="Enter Valve Status" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Pump Status:</label>
+                <input type="text" class="form-control" id="pumpStatus" name="pumpStatus"
+                       placeholder="Enter Pump Status" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Flow Indicators:</label>
+                <input type="text" class="form-control" id="flowIndicateor" name="flowIndicateor"
+                       placeholder="ENter Flow Indicators" required>
+            </div>
+            <button class="btn btn-block btn-primary text-white py-2 px-4"
+
+                                type="submit">
+                            Send To Scada
+                        </button>
+
+        </form>
+        </p>
+
+    </div>
+</section>
+{%endblock%}

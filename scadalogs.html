@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCADA Machine Logs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: black; /* Background color set to black */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white; /* Text color set to white for better contrast */
+        }
+        h2 {
+            color: #fff; /* Heading color in white */
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+            color: black; /* Input text color set to black */
+        }
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            color: black; /* Text color inside the table cells set to black */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease;
+        }
+        .status-tampered {
+            background-color: #e60000; /* Intense red */
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 8px;
+            cursor: pointer; /* Change cursor to indicate clickable */
+        }
+        .status-idle {
+            background-color: #28a745; /* Original green */
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        .status-normal {
+            background-color: #007e33; /* Darker green for more emphasis */
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+        /* Style for the alert box */
+        .alert {
+            background-color: #ff1a1a;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>SCADA Machine Logs</h2>
+        
+        <!-- Alert Box -->
+        <div id="alertBox" class="alert">
+            Attacker Intercepted: Data Tampered at <span id="tamperedTimestamp"></span>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search logs..." />
+        </div>
+
+        <!-- Logs Table -->
+        <table>
+            <tbody>
+                <!-- Log data will be dynamically inserted here -->
+                {{ data|safe }}
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Loop through each table cell
+            document.querySelectorAll("td").forEach(function(cell) {
+                let text = cell.innerText.trim().toLowerCase();
+
+                // Check if the status is tampered and make it clickable
+                if (text === "tampered") {
+                    cell.innerHTML = `<span class="status-tampered">Tampered</span>`;
+                    cell.style.backgroundColor = "#ffcccc"; // Light red background
+                    cell.addEventListener("click", function() {
+                        showTamperedAlert(); // Show alert on click
+                    });
+                } else if (text === "idle") {
+                    cell.innerHTML = `<span class="status-idle">Idle</span>`;
+                } else if (text === "normal") {
+                    cell.innerHTML = `<span class="status-normal">Normal</span>`;
+                }
+            });
+        });
+
+        // Function to show the tampered alert
+        function showTamperedAlert() {
+            // Get the current timestamp
+            let timestamp = new Date().toLocaleString();
+
+            // Set the timestamp in the alert box
+            document.getElementById("tamperedTimestamp").innerText = timestamp;
+
+            // Show the alert box
+            document.getElementById("alertBox").style.display = "block";
+        }
+
+        // Search functionality for filtering logs
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            let filter = this.value.toLowerCase();
+            document.querySelectorAll("table tr").forEach(function(row) {
+                let text = row.innerText.toLowerCase();
+                row.style.display = text.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block contents %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<section id="main-content">
+    <div class="content" id="key-login">
+        <center>
+            <h2>Key-Based Login</h2>
+            <form action="{% url 'user_key' %}" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>Enter Your Key:</td>
+                        <td><input type="text" name="key" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button class="btn btn-block btn-primary text-white py-2 px-4" type="submit">
+                                Login
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color:red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        </center>
+    </div>
+</section>
+{% endblock %}

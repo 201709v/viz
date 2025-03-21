@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<!-- Include Bootstrap and jQuery -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<section id="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h2>User Registration Form</h2>
+                    </div>
+
+                    <div class="panel-body">
+                        <!-- Display Messages -->
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                    <strong>{{ message }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form action="{% url 'UserRegisterActions' %}" method="POST" class="form-horizontal">
+                            {% csrf_token %}
+                            
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">User Name</label>
+                                <div class="col-sm-9">
+                                    {{ form.name }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Login ID</label>
+                                <div class="col-sm-9">
+                                    {{ form.loginid }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    {{ form.password }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Mobile</label>
+                                <div class="col-sm-9">
+                                    {{ form.mobile }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Email</label>
+                                <div class="col-sm-9">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Locality</label>
+                                <div class="col-sm-9">
+                                    {{ form.locality }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Address</label>
+                                <div class="col-sm-9">
+                                    {{ form.address }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">City</label>
+                                <div class="col-sm-9">
+                                    {{ form.city }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">State</label>
+                                <div class="col-sm-9">
+                                    {{ form.state }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Status</label>
+                                <div class="col-sm-9">
+                                    {{ form.status }}
+                                </div>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary btn-lg" type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
